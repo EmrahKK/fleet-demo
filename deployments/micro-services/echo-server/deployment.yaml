@@ -16,6 +16,13 @@ spec:
     spec:
       containers:
       - name: echo-server
-        image: registry.mkkdev.com.tr/echo-server/echo-server:v0.0.3
+        image: registry.mkkdev.com.tr/echo-server/echo-server:v0.0.4
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "100m"
+          limits:
+            memory: "100Mi"
+            cpu: "200m"
         ports:
         - containerPort: 8080
